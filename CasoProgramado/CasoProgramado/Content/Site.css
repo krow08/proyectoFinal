@@ -52,3 +52,14 @@ textarea {
     height: 100%;
     width: 900px;
 }
+.modalBackground {
+    background-color: #999999;
+    filter: alpha(opacity=90);
+    opacity: 0.8;
+}
+
+.modalPoput {
+    background-color: #fff;
+    padding-top: 10px;
+    padding-left: 10px;
+}

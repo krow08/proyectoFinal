@@ -34,6 +34,10 @@ namespace Controlador
                 this.comando.Parameters.AddWithValue("@nombre", pCliente.Nombre);
                 this.comando.Parameters.AddWithValue("@tele", pCliente.Telefono);
                 this.comando.Parameters.AddWithValue("@ubicac", pCliente.Ubicacion);
+                this.comando.Parameters.AddWithValue("@numeroChe", pCliente.NumeroCheque);
+                this.comando.Parameters.AddWithValue("@nombreBa", pCliente.NombreBanco);
+                this.comando.Parameters.AddWithValue("@email", pCliente.Email);
+                this.comando.Parameters.AddWithValue("@password", pCliente.Password);
                 this.comando.Parameters.AddWithValue("@pago", pCliente.Pago);
 
                 //ejecucion del comando, sin consulta
@@ -102,7 +106,7 @@ namespace Controlador
                         lector.GetValue(1).ToString(),
                         int.Parse(lector.GetValue(2).ToString()),
                         lector.GetValue(3).ToString(),
-                        lector.GetValue(4).ToString());
+                        lector.GetValue(4).ToString()),
 
 
                     //siempre hay que cerrar le lector o el metodo o conexion

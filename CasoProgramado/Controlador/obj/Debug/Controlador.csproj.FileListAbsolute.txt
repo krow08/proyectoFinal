@@ -5,3 +5,10 @@ c:\users\enrique\documents\visual studio 2017\Projects\CasoProgramado\Controlado
 c:\users\enrique\documents\visual studio 2017\Projects\CasoProgramado\Controlador\obj\Debug\Controlador.csprojResolveAssemblyReference.cache
 c:\users\enrique\documents\visual studio 2017\Projects\CasoProgramado\Controlador\obj\Debug\Controlador.dll
 c:\users\enrique\documents\visual studio 2017\Projects\CasoProgramado\Controlador\obj\Debug\Controlador.pdb
+C:\Users\Enrique\Documents\GitHub\proyectoFinal\CasoProgramado\Controlador\bin\Debug\Controlador.dll
+C:\Users\Enrique\Documents\GitHub\proyectoFinal\CasoProgramado\Controlador\bin\Debug\Controlador.pdb
+C:\Users\Enrique\Documents\GitHub\proyectoFinal\CasoProgramado\Controlador\bin\Debug\Modelo.dll
+C:\Users\Enrique\Documents\GitHub\proyectoFinal\CasoProgramado\Controlador\bin\Debug\Modelo.pdb
+C:\Users\Enrique\Documents\GitHub\proyectoFinal\CasoProgramado\Controlador\obj\Debug\Controlador.csprojResolveAssemblyReference.cache
+C:\Users\Enrique\Documents\GitHub\proyectoFinal\CasoProgramado\Controlador\obj\Debug\Controlador.dll
+C:\Users\Enrique\Documents\GitHub\proyectoFinal\CasoProgramado\Controlador\obj\Debug\Controlador.pdb
