@@ -1,0 +1,7 @@
+c:\users\enrique\documents\visual studio 2017\Projects\CasoProgramado\Controlador\bin\Debug\Controlador.dll
+c:\users\enrique\documents\visual studio 2017\Projects\CasoProgramado\Controlador\bin\Debug\Controlador.pdb
+c:\users\enrique\documents\visual studio 2017\Projects\CasoProgramado\Controlador\bin\Debug\Modelo.dll
+c:\users\enrique\documents\visual studio 2017\Projects\CasoProgramado\Controlador\bin\Debug\Modelo.pdb
+c:\users\enrique\documents\visual studio 2017\Projects\CasoProgramado\Controlador\obj\Debug\Controlador.csprojResolveAssemblyReference.cache
+c:\users\enrique\documents\visual studio 2017\Projects\CasoProgramado\Controlador\obj\Debug\Controlador.dll
+c:\users\enrique\documents\visual studio 2017\Projects\CasoProgramado\Controlador\obj\Debug\Controlador.pdb
