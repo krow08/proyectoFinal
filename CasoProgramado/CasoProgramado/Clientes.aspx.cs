@@ -27,7 +27,7 @@ namespace CasoProgramado
             {
                 this.stringConexion = ConfigurationManager.ConnectionStrings["stringConexion"].ConnectionString;
                 //se crea una instancia del cliente con los datos ingresados en el front-END
-                this.varCliente = new Cls_Clientes(int.Parse(this.txtCedula.Text), this.txtNombre.Text,int.Parse(this.txtTelefono.Text), this.TxtUbicacion.Text, this.CbxPago.Text);
+                //this.varCliente = new Cls_Clientes(int.Parse(this.txtCedula.Text), this.txtNombre.Text,int.Parse(this.txtTelefono.Text), this.TxtUbicacion.Text, this.CbxPago.Text);
 
                 //utilizar controlador
 
@@ -54,7 +54,7 @@ namespace CasoProgramado
             {
                 this.stringConexion = ConfigurationManager.ConnectionStrings["stringConexion"].ConnectionString;
                 //se crea una instancia del cliente con los datos ingresados en el front-END
-                this.varCliente = new Cls_Clientes(int.Parse(this.txtCedula.Text), this.txtNombre.Text, int.Parse(this.txtTelefono.Text), this.TxtUbicacion.Text, this.CbxPago.Text);
+               // this.varCliente = new Cls_Clientes(int.Parse(this.txtCedula.Text), this.txtNombre.Text, int.Parse(this.txtTelefono.Text), this.TxtUbicacion.Text, this.CbxPago.Text);
 
                 //utilizar controlador
 
@@ -102,7 +102,7 @@ namespace CasoProgramado
             this.txtNombre.Text = "";
             this.txtTelefono.Text = "";
             this.TxtUbicacion.Text = "";
-            this.CbxPago.Text = "";
+           // this.CbxPago.Text = "";
 
         }
 
@@ -125,7 +125,7 @@ namespace CasoProgramado
                 this.txtNombre.Text = this.varCliente.Nombre;
                 this.txtTelefono.Text = ""+this.varCliente.Telefono;
                 this.TxtUbicacion.Text = this.varCliente.Ubicacion;
-                this.CbxPago.Text = this.varCliente.Pago;
+               // this.CbxPago.Text = this.varCliente.Pago;
             }
             catch (Exception ex)
             {
