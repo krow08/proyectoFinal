@@ -27,11 +27,18 @@ namespace CasoProgramado
             {
                 this.stringConexion = ConfigurationManager.ConnectionStrings["stringConexion"].ConnectionString;
                 //se crea una instancia del cliente con los datos ingresados en el front-END
-                //this.varCliente = new Cls_Clientes(int.Parse(this.txtCedula.Text), this.txtNombre.Text,int.Parse(this.txtTelefono.Text), this.TxtUbicacion.Text, this.CbxPago.Text);
+                this.varCliente = new Cls_Clientes(int.Parse(this.txtCedula.Text), this.txtNombre.Text, int.Parse(this.txtTelefono.Text), this.txtModalMapaddress.Text, this.CbxTipoPago.Text, this.txtemal.Text, this.txtpassword.Text);
 
                 //utilizar controlador
 
                 this.varclienteADO = new Cls_Clientes_ADO(this.stringConexion);
+
+                this.varCliente.NumeroCheque = int.Parse(this.txtNumeroCheque.Text);
+                this.varCliente.NombreBanco = this.txtNombreBanco.Text;
+                this.varCliente.latitud = this.ModalMapLat.Text;
+                this.varCliente.longitud = this.ModalMapLon.Text;
+                
+
 
                 //Se utiliza el controlador para almacenar los datos del objeto medelo +
                 //en la base datos(DB_Motos)
@@ -44,7 +51,7 @@ namespace CasoProgramado
             }
             catch (Exception ex)
             {
-
+                throw ex;
             }
         }
 
@@ -54,11 +61,17 @@ namespace CasoProgramado
             {
                 this.stringConexion = ConfigurationManager.ConnectionStrings["stringConexion"].ConnectionString;
                 //se crea una instancia del cliente con los datos ingresados en el front-END
-               // this.varCliente = new Cls_Clientes(int.Parse(this.txtCedula.Text), this.txtNombre.Text, int.Parse(this.txtTelefono.Text), this.TxtUbicacion.Text, this.CbxPago.Text);
+                this.varCliente = new Cls_Clientes(int.Parse(this.txtCedula.Text), this.txtNombre.Text, int.Parse(this.txtTelefono.Text), this.txtModalMapaddress.Text, this.CbxTipoPago.Text, this.txtemal.Text, this.txtpassword.Text);
 
                 //utilizar controlador
 
+
                 this.varclienteADO = new Cls_Clientes_ADO(this.stringConexion);
+
+                this.varCliente.NumeroCheque = int.Parse(this.txtNumeroCheque.Text);
+                this.varCliente.NombreBanco = this.txtNombreBanco.Text;
+                this.varCliente.latitud = this.ModalMapLat.Text;
+                this.varCliente.longitud = this.ModalMapLon.Text;
 
                 //Se utiliza el controlador para almacenar los datos del objeto medelo +
                 //en la base datos(DB_Motos)
@@ -101,8 +114,12 @@ namespace CasoProgramado
             this.txtCedula.Text = "";
             this.txtNombre.Text = "";
             this.txtTelefono.Text = "";
-            this.TxtUbicacion.Text = "";
-           // this.CbxPago.Text = "";
+            this.CbxTipoPago.SelectedIndex = 0;
+            this.txtNumeroCheque.Text = "";
+            this.txtNombreBanco.Text = "";
+            this.txtemal.Text = "";
+            this.txtpassword.Text = "";
+            // this.CbxPago.Text = "";
 
         }
 
@@ -123,14 +140,44 @@ namespace CasoProgramado
                 //se asigna los datos al Front-end
                 //recuerde que la variable varcliente es una clase del modelo
                 this.txtNombre.Text = this.varCliente.Nombre;
-                this.txtTelefono.Text = ""+this.varCliente.Telefono;
-                this.TxtUbicacion.Text = this.varCliente.Ubicacion;
-               // this.CbxPago.Text = this.varCliente.Pago;
+                this.txtTelefono.Text = "" + this.varCliente.Telefono;
+                this.txtModalMapaddress.Text = this.varCliente.Ubicacion;
+                this.txtNumeroCheque.Text = "" + this.varCliente.NumeroCheque;
+                this.txtNombreBanco.Text = this.varCliente.NombreBanco;
+                this.ModalMapLat.Text = this.varCliente.latitud;
+                this.ModalMapLon.Text = this.varCliente.longitud;
+                this.txtemal.Text = this.varCliente.Email;
+                this.txtpassword.Text = this.varCliente.Password;
+
             }
             catch (Exception ex)
             {
-
+                //ex.message nos permite obtener los datos del error en caso que exista durante la transaccion
+                Response.Write("<script languaje='javascript'> alert(' No se encontro el cliente mediante esa Cédula'); </script>");
             }
+        }
+
+        protected void CbxTipoPago_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (this.CbxTipoPago.SelectedIndex == 1)
+            {
+                this.btnCheque.Visible = true;
+
+                if(this.btnCheque.Visible == true)
+                {
+                    this.panelModal.Visible = true;
+                }
+                else
+                {
+                    this.panelModal.Visible = false;
+                }
+            }
+            else
+            {
+                this.btnCheque.Visible = false;
+                this.panelModal.Visible = false;
+            }
+               
         }
     }
 }

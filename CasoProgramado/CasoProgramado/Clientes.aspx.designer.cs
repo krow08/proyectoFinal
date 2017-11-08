@@ -67,24 +67,6 @@ namespace CasoProgramado {
         protected global::System.Web.UI.WebControls.TextBox txtTelefono;
         
         /// <summary>
-        /// lblUbicacion control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblUbicacion;
-        
-        /// <summary>
-        /// TxtUbicacion control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtUbicacion;
-        
-        /// <summary>
         /// lblTipoPago control.
         /// </summary>
         /// <remarks>
@@ -103,6 +85,51 @@ namespace CasoProgramado {
         protected global::System.Web.UI.WebControls.DropDownList CbxTipoPago;
         
         /// <summary>
+        /// btnCheque control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnCheque;
+        
+        /// <summary>
+        /// lblUbicacion control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblUbicacion;
+        
+        /// <summary>
+        /// txtModalMapaddress control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtModalMapaddress;
+        
+        /// <summary>
+        /// ModalMapLat control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox ModalMapLat;
+        
+        /// <summary>
+        /// ModalMapLon control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox ModalMapLon;
+        
+        /// <summary>
         /// lblEmail control.
         /// </summary>
         /// <remarks>
@@ -112,13 +139,13 @@ namespace CasoProgramado {
         protected global::System.Web.UI.WebControls.Label lblEmail;
         
         /// <summary>
-        /// txtEmail control.
+        /// txtemal control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtEmail;
+        protected global::System.Web.UI.WebControls.TextBox txtemal;
         
         /// <summary>
         /// lblPassword control.
@@ -130,13 +157,13 @@ namespace CasoProgramado {
         protected global::System.Web.UI.WebControls.Label lblPassword;
         
         /// <summary>
-        /// txtPassword control.
+        /// txtpassword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPassword;
+        protected global::System.Web.UI.WebControls.TextBox txtpassword;
         
         /// <summary>
         /// brnRegistrar control.

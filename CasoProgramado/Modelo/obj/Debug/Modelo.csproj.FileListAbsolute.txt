@@ -3,3 +3,8 @@ c:\users\enrique\documents\visual studio 2017\Projects\CasoProgramado\Modelo\bin
 c:\users\enrique\documents\visual studio 2017\Projects\CasoProgramado\Modelo\obj\Debug\Modelo.csprojResolveAssemblyReference.cache
 c:\users\enrique\documents\visual studio 2017\Projects\CasoProgramado\Modelo\obj\Debug\Modelo.dll
 c:\users\enrique\documents\visual studio 2017\Projects\CasoProgramado\Modelo\obj\Debug\Modelo.pdb
+C:\Users\Enrique\Documents\GitHub\proyectoFinal\CasoProgramado\Modelo\bin\Debug\Modelo.dll
+C:\Users\Enrique\Documents\GitHub\proyectoFinal\CasoProgramado\Modelo\bin\Debug\Modelo.pdb
+C:\Users\Enrique\Documents\GitHub\proyectoFinal\CasoProgramado\Modelo\obj\Debug\Modelo.csprojResolveAssemblyReference.cache
+C:\Users\Enrique\Documents\GitHub\proyectoFinal\CasoProgramado\Modelo\obj\Debug\Modelo.dll
+C:\Users\Enrique\Documents\GitHub\proyectoFinal\CasoProgramado\Modelo\obj\Debug\Modelo.pdb

@@ -34,11 +34,14 @@ namespace Controlador
                 this.comando.Parameters.AddWithValue("@nombre", pCliente.Nombre);
                 this.comando.Parameters.AddWithValue("@tele", pCliente.Telefono);
                 this.comando.Parameters.AddWithValue("@ubicac", pCliente.Ubicacion);
-                this.comando.Parameters.AddWithValue("@numeroChe", pCliente.NumeroCheque);
-                this.comando.Parameters.AddWithValue("@nombreBa", pCliente.NombreBanco);
+                this.comando.Parameters.AddWithValue("@pago", pCliente.Pago);
                 this.comando.Parameters.AddWithValue("@email", pCliente.Email);
                 this.comando.Parameters.AddWithValue("@password", pCliente.Password);
-                this.comando.Parameters.AddWithValue("@pago", pCliente.Pago);
+                this.comando.Parameters.AddWithValue("@numeroCheque", pCliente.NumeroCheque);
+                this.comando.Parameters.AddWithValue("@nombreBanco", pCliente.NombreBanco);
+                this.comando.Parameters.AddWithValue("@latitud", pCliente.latitud);
+                this.comando.Parameters.AddWithValue("@longitud", pCliente.longitud);
+
 
                 //ejecucion del comando, sin consulta
                 this.comando.ExecuteNonQuery();
@@ -106,8 +109,15 @@ namespace Controlador
                         lector.GetValue(1).ToString(),
                         int.Parse(lector.GetValue(2).ToString()),
                         lector.GetValue(3).ToString(),
-                        lector.GetValue(4).ToString()),
+                        lector.GetValue(4).ToString(),
+                        lector.GetValue(5).ToString(),
+                        lector.GetValue(6).ToString());
 
+                    varCli.NumeroCheque = int.Parse(lector.GetValue(7).ToString());
+                    varCli.NombreBanco = lector.GetValue(8).ToString();
+                    varCli.latitud = lector.GetValue(9).ToString();
+                    varCli.longitud= lector.GetValue(10).ToString();
+                    
 
                     //siempre hay que cerrar le lector o el metodo o conexion
                     lector.Close();
@@ -186,6 +196,10 @@ namespace Controlador
                 this.comando.Parameters.AddWithValue("@tele", pCliente.Telefono);
                 this.comando.Parameters.AddWithValue("@ubicac", pCliente.Ubicacion);
                 this.comando.Parameters.AddWithValue("@pago", pCliente.Pago);
+                this.comando.Parameters.AddWithValue("@numeroCheque", pCliente.NumeroCheque);
+                this.comando.Parameters.AddWithValue("@nombreBanco", pCliente.NombreBanco);
+                this.comando.Parameters.AddWithValue("@email", pCliente.Email);
+                this.comando.Parameters.AddWithValue("@password", pCliente.Password);
 
 
                 //ejecucion del comando, sin consulta
@@ -206,4 +220,4 @@ namespace Controlador
         }
     }//Cierre de clase
 }//Cierre de namespace
-//carepicha
+ //carepicha
