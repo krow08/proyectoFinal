@@ -102,11 +102,11 @@ namespace Controlador
                     //Lector es un vector de posiciones
                     //0 =CedulaCliente, 1 = nombre, 2 = Apellido1...
                     //Se instancia un cliente con los datos del lector
-                    varCli = new Cls_Clientes(int.Parse(lector.GetValue(0).ToString()),
+                    /*varCli = new Cls_Clientes(int.Parse(lector.GetValue(0).ToString()),
                         lector.GetValue(1).ToString(),
                         int.Parse(lector.GetValue(2).ToString()),
                         lector.GetValue(3).ToString(),
-                        lector.GetValue(4).ToString()),
+                        lector.GetValue(4).ToString()),*/
 
 
                     //siempre hay que cerrar le lector o el metodo o conexion
