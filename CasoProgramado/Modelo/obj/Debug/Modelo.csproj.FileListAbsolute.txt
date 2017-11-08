@@ -3,8 +3,16 @@ c:\users\enrique\documents\visual studio 2017\Projects\CasoProgramado\Modelo\bin
 c:\users\enrique\documents\visual studio 2017\Projects\CasoProgramado\Modelo\obj\Debug\Modelo.csprojResolveAssemblyReference.cache
 c:\users\enrique\documents\visual studio 2017\Projects\CasoProgramado\Modelo\obj\Debug\Modelo.dll
 c:\users\enrique\documents\visual studio 2017\Projects\CasoProgramado\Modelo\obj\Debug\Modelo.pdb
+<<<<<<< HEAD
 C:\Users\Enrique\Documents\GitHub\proyectoFinal\CasoProgramado\Modelo\bin\Debug\Modelo.dll
 C:\Users\Enrique\Documents\GitHub\proyectoFinal\CasoProgramado\Modelo\bin\Debug\Modelo.pdb
 C:\Users\Enrique\Documents\GitHub\proyectoFinal\CasoProgramado\Modelo\obj\Debug\Modelo.csprojResolveAssemblyReference.cache
 C:\Users\Enrique\Documents\GitHub\proyectoFinal\CasoProgramado\Modelo\obj\Debug\Modelo.dll
 C:\Users\Enrique\Documents\GitHub\proyectoFinal\CasoProgramado\Modelo\obj\Debug\Modelo.pdb
+=======
+C:\Users\Krow\Documents\GitHub\proyectoFinal-master\CasoProgramado\proyectoFinal\CasoProgramado\Modelo\bin\Debug\Modelo.dll
+C:\Users\Krow\Documents\GitHub\proyectoFinal-master\CasoProgramado\proyectoFinal\CasoProgramado\Modelo\bin\Debug\Modelo.pdb
+C:\Users\Krow\Documents\GitHub\proyectoFinal-master\CasoProgramado\proyectoFinal\CasoProgramado\Modelo\obj\Debug\Modelo.csprojResolveAssemblyReference.cache
+C:\Users\Krow\Documents\GitHub\proyectoFinal-master\CasoProgramado\proyectoFinal\CasoProgramado\Modelo\obj\Debug\Modelo.dll
+C:\Users\Krow\Documents\GitHub\proyectoFinal-master\CasoProgramado\proyectoFinal\CasoProgramado\Modelo\obj\Debug\Modelo.pdb
+>>>>>>> 57e972975481fc37d0ce93753d1b9291c73e39bf

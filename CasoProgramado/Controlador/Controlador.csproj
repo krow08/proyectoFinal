@@ -41,6 +41,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cls_Clientes_ADO.cs" />
+    <Compile Include="Cls_Motos_ADO.cs" />
+    <Compile Include="Cls_tipos_ADO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

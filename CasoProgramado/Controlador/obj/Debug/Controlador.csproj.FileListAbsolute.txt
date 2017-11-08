@@ -12,3 +12,10 @@ C:\Users\Enrique\Documents\GitHub\proyectoFinal\CasoProgramado\Controlador\bin\D
 C:\Users\Enrique\Documents\GitHub\proyectoFinal\CasoProgramado\Controlador\obj\Debug\Controlador.csprojResolveAssemblyReference.cache
 C:\Users\Enrique\Documents\GitHub\proyectoFinal\CasoProgramado\Controlador\obj\Debug\Controlador.dll
 C:\Users\Enrique\Documents\GitHub\proyectoFinal\CasoProgramado\Controlador\obj\Debug\Controlador.pdb
+C:\Users\Krow\Documents\GitHub\proyectoFinal-master\CasoProgramado\proyectoFinal\CasoProgramado\Controlador\obj\Debug\Controlador.csprojResolveAssemblyReference.cache
+C:\Users\Krow\Documents\GitHub\proyectoFinal-master\CasoProgramado\proyectoFinal\CasoProgramado\Controlador\obj\Debug\Controlador.dll
+C:\Users\Krow\Documents\GitHub\proyectoFinal-master\CasoProgramado\proyectoFinal\CasoProgramado\Controlador\obj\Debug\Controlador.pdb
+C:\Users\Krow\Documents\GitHub\proyectoFinal-master\CasoProgramado\proyectoFinal\CasoProgramado\Controlador\bin\Debug\Controlador.dll
+C:\Users\Krow\Documents\GitHub\proyectoFinal-master\CasoProgramado\proyectoFinal\CasoProgramado\Controlador\bin\Debug\Controlador.pdb
+C:\Users\Krow\Documents\GitHub\proyectoFinal-master\CasoProgramado\proyectoFinal\CasoProgramado\Controlador\bin\Debug\Modelo.dll
+C:\Users\Krow\Documents\GitHub\proyectoFinal-master\CasoProgramado\proyectoFinal\CasoProgramado\Controlador\bin\Debug\Modelo.pdb

@@ -105,13 +105,17 @@ namespace Controlador
                     //Lector es un vector de posiciones
                     //0 =CedulaCliente, 1 = nombre, 2 = Apellido1...
                     //Se instancia un cliente con los datos del lector
-                    varCli = new Cls_Clientes(int.Parse(lector.GetValue(0).ToString()),
+                    /*varCli = new Cls_Clientes(int.Parse(lector.GetValue(0).ToString()),
                         lector.GetValue(1).ToString(),
                         int.Parse(lector.GetValue(2).ToString()),
                         lector.GetValue(3).ToString(),
+<<<<<<< HEAD
                         lector.GetValue(4).ToString(),
                         lector.GetValue(5).ToString(),
                         lector.GetValue(6).ToString());
+=======
+                        lector.GetValue(4).ToString()),*/
+>>>>>>> 57e972975481fc37d0ce93753d1b9291c73e39bf
 
                     varCli.NumeroCheque = int.Parse(lector.GetValue(7).ToString());
                     varCli.NombreBanco = lector.GetValue(8).ToString();
@@ -220,4 +224,7 @@ namespace Controlador
         }
     }//Cierre de clase
 }//Cierre de namespace
+<<<<<<< HEAD
  //carepicha
+=======
+>>>>>>> 57e972975481fc37d0ce93753d1b9291c73e39bf
