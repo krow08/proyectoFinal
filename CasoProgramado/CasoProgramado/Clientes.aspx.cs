@@ -83,7 +83,7 @@ namespace CasoProgramado
             }
             catch (Exception ex)
             {
-
+                throw ex;
             }
         }
 
@@ -131,7 +131,7 @@ namespace CasoProgramado
                 //Se utiliza el objeto configuracion manager para leer el string de conexion
                 //almacena el el web.config
                 this.varclienteADO = new Cls_Clientes_ADO(
-                    ConfigurationManager.ConnectionStrings["stringconexion"].ConnectionString);
+                    ConfigurationManager.ConnectionStrings["stringConexion"].ConnectionString);
 
                 //se utiliza el metodo consultar cliente, que recibe la Cedula
                 //Los datos consultados se almacena en la variable varCliente

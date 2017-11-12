@@ -19,35 +19,41 @@
                 <div class="form-group">
                     <asp:Label ID="lblPlaca" runat="server" class="control-label col-md-2" Text="Numero de Placa:"></asp:Label>
                     <div class="col-md-10">
-                        <asp:TextBox ID="txtPlaca" class="form-control" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txtPlaca" CssClass="form-control" runat="server"></asp:TextBox>
                     </div>
                 </div>
 
-                <div class="form-group">
+                <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                    <ContentTemplate>
+                    <div class="form-group">
+                        <asp:Label ID="lblTipo" runat="server" class="control-label col-md-2" Text="Tipo de Moto:"></asp:Label>
+                        <div class="col-md-10">
+                            <asp:DropDownList ID="cbxTipo" CssClass="form-control" runat="server" OnSelectedIndexChanged="cbxTipo_SelectedIndexChanged" AutoPostBack="true"></asp:DropDownList>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
                     <asp:Label ID="lblPrecio" class="control-label col-md-2" runat="server" Text="Precio:"></asp:Label>
                     <div class="col-md-10">
-                        <asp:TextBox ID="txtPrecio" class="form-control" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txtPrecio" CssClass="form-control" runat="server"></asp:TextBox>
                     </div>
                 </div>
+                    </ContentTemplate>
+                </asp:UpdatePanel>
 
-                <div class="form-group">
-                    <asp:Label ID="lblTipo" runat="server" class="control-label col-md-2" Text="Tipo de Moto:"></asp:Label>
-                    <div class="col-md-10">
-                        <asp:DropDownList ID="cbxTipo" class="form-control" runat="server"></asp:DropDownList>
-                    </div>
-                </div>
+                
 
                 <div class="form-group">
                     <asp:Label ID="lblModelo" runat="server" class="control-label col-md-2" Text="Modelo del Vehiculo:"></asp:Label>
                     <div class="col-md-10">
-                        <asp:TextBox ID="txtModelo" class="form-control" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txtModelo" CssClass="form-control" runat="server"></asp:TextBox>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <asp:Label ID="lblDescripcion" runat="server" class="control-label col-md-2" Text="Descripcion:"></asp:Label>
                     <div class="col-md-10">
-                        <asp:TextBox ID="txtDescripcion" class="form-control" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txtDescripcion" CssClass="form-control" runat="server"></asp:TextBox>
                     </div>
                 </div>
 
@@ -56,7 +62,7 @@
 
             <%-----imagen.----%>
             <div class="col-md-c6">
-                <asp:ImageButton ID="Scooter1" ImageUrl="~/imagenes/Scooter1.jpg" runat="server" Width="240px" Height="195px" />
+                <asp:ImageButton ID="Scooter1" ImageUrl="~/imagenes/índice.png" runat="server" Width="240px" Height="195px" />
                 <div class="form-group">
                     <asp:Button ID="btnRegistrar" class="btn btn-primary botones" runat="server" Text="Registrar" OnClick="btnRegistrar_Click" />
                     <asp:Button ID="btnConsultar" class="btn btn-primary botones" runat="server" Text="Consultar" OnClick="btnConsultar_Click" />

@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 //libreria de SQL
 using System.Data.SqlClient;
+using System.Data;
+using Modelo;
 
 namespace Controlador
 {
@@ -12,14 +14,14 @@ namespace Controlador
     {
         private SqlConnection conexion;
         private SqlCommand comando;
-        private string stringconexion;
+        private string stringConexion;
         private SqlDataAdapter adaptador;
 
         public System.Data.DataSet TipoMotos()
         {
             try
             {
-                this.conexion = new SqlConnection(this.stringconexion);
+                this.conexion = new SqlConnection(this.stringConexion);
                 this.conexion.Open();
                 this.comando = new SqlCommand();
                 this.comando.Connection = this.conexion;
@@ -44,9 +46,57 @@ namespace Controlador
             }
         }
 
+
+
+        public string consultarPrecio(string id)
+        {
+            try
+            {
+
+                this.conexion = new SqlConnection(this.stringConexion);
+
+                this.comando = new SqlCommand();
+
+                this.conexion.Open();
+                this.comando.Connection = this.conexion;
+                this.comando.CommandText = "[Sp_Cns_TipoMoto]";
+                this.comando.CommandType = System.Data.CommandType.StoredProcedure;
+                this.comando.Parameters.AddWithValue("@Id", id);
+
+                SqlDataReader lector = this.comando.ExecuteReader();
+                Cls_Categorias varTipoMoto = null;
+
+                if (lector.Read())
+                {
+
+                    varTipoMoto = new Cls_Categorias();
+                    varTipoMoto.id = int.Parse(lector.GetValue(0).ToString()); 
+
+
+                    
+                }
+                else
+                    throw new Exception("no existe ninguna moto con la placa # " + id);
+
+                lector.Close();
+                conexion.Close();
+                conexion.Dispose();
+                comando.Dispose();
+                lector = null;
+
+                //este metodo retorna la instancia del objeto
+                return "" + varTipoMoto;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+
         public Cls_tipos_ADO(string pStringConexion)
         {
-            this.stringconexion = pStringConexion;
+            this.stringConexion = pStringConexion;
         }
     }
 }

@@ -28,7 +28,7 @@
             <div class="form-group">
                 <asp:Label ID="lblCedula" runat="server" class="control-label col-md-2" Text="Cedula"></asp:Label>
                 <div class="col-md-10">
-                    <asp:TextBox ID="txtCedula" class="form-control" runat="server" Width="200px"></asp:TextBox>
+                    <asp:TextBox ID="txtCedula" CssClass="form-control" runat="server" Width="200px"></asp:TextBox>
                 </div>
             </div>
 
@@ -36,7 +36,7 @@
             <div class="form-group">
                 <asp:Label ID="lblNombre" runat="server" class="control-label col-md-2" Text="Nombre"></asp:Label>
                 <div class="col-md-10">
-                    <asp:TextBox ID="txtNombre" class="form-control" runat="server" Width="200px"></asp:TextBox>
+                    <asp:TextBox ID="txtNombre" CssClass="form-control" runat="server" Width="200px"></asp:TextBox>
                 </div>
             </div>
 
@@ -44,26 +44,31 @@
             <div class="form-group">
                 <asp:Label ID="lblTelefono" runat="server" class="control-label col-md-2" Text="Teléfono"></asp:Label>
                 <div class="col-md-10">
-                    <asp:TextBox ID="txtTelefono" class="form-control" runat="server" Width="200px"></asp:TextBox>
+                    <asp:TextBox ID="txtTelefono" CssClass="form-control" runat="server" Width="200px"></asp:TextBox>
                 </div>
             </div>
 
-            <!-- Solicitud del tipo de pago-->
+
             <div class="form-group">
                 <asp:Label ID="lblTipoPago" runat="server" class="control-label col-md-2" Text="Tipo Pago"></asp:Label>
                 <div class="col-md-10">
+
                     <asp:DropDownList ID="CbxTipoPago" class="form-control" runat="server" Width="200px" OnSelectedIndexChanged="CbxTipoPago_SelectedIndexChanged" AutoPostBack="true">
                         <asp:ListItem>Efectivo</asp:ListItem>
                         <asp:ListItem>Cheque</asp:ListItem>
                         <asp:ListItem>Tarjeta</asp:ListItem>
                     </asp:DropDownList>
-                    <asp:Button ID="btnCheque" Visible="false" class="btn btn-success botones" runat="server" Text="Cheque" OnClick="brnRegistrar_Click" />
+                    <asp:Button ID="btnCheque" Visible="false" CssClass="btn btn-success botones" runat="server" Text="Cheque" OnClick="brnRegistrar_Click" style="margin-top:7px;margin-bottom:-8px"/>
                 </div>
             </div>
 
+
+            <!-- Solicitud del tipo de pago-->
+
+
             <!-- Solicitud de la Ubicacion-->
             <div class="form-group">
-                <asp:Label ID="lblUbicacion" runat="server" class="control-label col-md-2" Text="Ubicación"></asp:Label>
+                <asp:Label ID="lblUbicacion" runat="server" CssClass="control-label col-md-2" Text="Ubicación"></asp:Label>
                 <div class="col-md-10">
                     <button type="button" data-toggle="modal" data-target="#ModalMap" class="btn btn-default">
                         <span class="glyphicon glyphicon-map-marker "></span><span id="lblUbicacion2">Seleccionar Ubicación </span>

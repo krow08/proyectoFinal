@@ -2,40 +2,61 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
-    <div class="jumbotron">
-        <h1>ASP.NET</h1>
-        <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS, and JavaScript.</p>
-        <p><a href="http://www.asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="jumbotron" style="background-color: white">
+                    <table class="table table-responsive">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <h1>Lista de Productos</h1>
+                                    <asp:Label ID="lblAgregado" runat="server" Text="Label"></asp:Label>
+                                </td>
+                                <td>
+                                    <asp:ImageButton ID="ImageButton1" Width="120" Height="120" runat="server" ImageUrl="~/Imagenes/carro-de-compras.jpg"  />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
 
-    <div class="row">
-        <div class="col-md-4">
-            <h2>Getting started</h2>
-            <p>
-                ASP.NET Web Forms lets you build dynamic websites using a familiar drag-and-drop, event-driven model.
-            A design surface and hundreds of controls and components let you rapidly build sophisticated, powerful UI-driven sites with data access.
-            </p>
-            <p>
-                <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301948">Learn more &raquo;</a>
-            </p>
-        </div>
-        <div class="col-md-4">
-            <h2>Get more libraries</h2>
-            <p>
-                NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.
-            </p>
-            <p>
-                <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301949">Learn more &raquo;</a>
-            </p>
-        </div>
-        <div class="col-md-4">
-            <h2>Web Hosting</h2>
-            <p>
-                You can easily find a web hosting company that offers the right mix of features and price for your applications.
-            </p>
-            <p>
-                <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301950">Learn more &raquo;</a>
-            </p>
+                                    <asp:DataList ID="DataList1" runat="server" DataKeyField="placa" DataSourceID="SqlDataSource1" RepeatColumns="4" OnItemCommand="DataList1_ItemCommand">
+                                        <ItemTemplate>
+                                            <asp:Image ID="NombreFotoLabel" Width="140" Height="120" runat="server" ImageUrl='<%# "~/Imagenes/"+Eval("nombreFoto") %>' />
+                                            <br />
+                                            <br />
+                                                               
+                                            Placa :
+                                    <asp:Label ID="lblPlaca" runat="server" Text='<%# Eval("placa") %>' />
+                                            <br />
+                                            Modelo :
+                                    <asp:Label ID="lblModelo" runat="server" Text='<%# Eval("Modelo") %>' />
+                                            <br />
+                                            Tipo :
+                                    <asp:Label ID="lblTipo" runat="server" Text='<%# Eval("tipo") %>' />
+                                            <br />
+                                            Precio :
+                                    <asp:Label ID="lblPrecio" runat="server" Text='<%# Eval("precio") %>' />
+                                            <br />
+                                            Cantidad :
+                                    <asp:Label ID="lblDescripcion" runat="server" Text='<%# Eval("descripcion") %>' />
+                                            <br />
+                                            <asp:Button ID="btnAgregarCarrito" class="btn btn-default form-control" runat="server" CommandName="Seleccionar" Text="Agregar al Carrito" />
+                                            <br />
+                                        </ItemTemplate>
+                                    </asp:DataList>
+
+                                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString='<%$ ConnectionStrings:Db_CasoProgramadoConnectionString %>' SelectCommand="SELECT p.Placa, p.Modelo, t.tipo, p.Precio, p.Descripcion, p.NombreFoto FROM tipoMotos AS t INNER JOIN Tbl_Motos AS p ON p.Tipo = t.id"></asp:SqlDataSource>
+
+                                </td>
+
+                            </tr>
+
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
     </div>
 

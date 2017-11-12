@@ -13,5 +13,15 @@ namespace CasoProgramado
         {
 
         }
+
+        protected void DataList1_ItemCommand(object source, DataListCommandEventArgs e)
+        {
+
+        }
+
+        protected void DataList1_ItemCommand1(object source, DataListCommandEventArgs e)
+        {
+
+        }
     }
 }

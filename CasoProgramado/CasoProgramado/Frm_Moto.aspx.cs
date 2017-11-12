@@ -23,6 +23,7 @@ namespace CasoProgramado
 
         //variable controlador para el cliente
         private Cls_Motos_ADO varMotoADO;
+        private Cls_tipos_ADO varTipoAdo;
 
         //variable para almacenar el string de conexion del web.config
         private string stringConexion;
@@ -31,12 +32,12 @@ namespace CasoProgramado
         {
             try
             {
+                this.varTipoAdo = new Cls_tipos_ADO(ConfigurationManager.ConnectionStrings["stringConexion"].ConnectionString);
+
+
                 if (!IsPostBack)
                 {
-                    Cls_tipos_ADO controladorTipos = new Cls_tipos_ADO(ConfigurationManager.ConnectionStrings["stringConexion"].ConnectionString);
-                    this.cbxTipo.DataSource = null;
-
-                    this.cbxTipo.DataSource = controladorTipos.TipoMotos();
+                    this.cbxTipo.DataSource = this.varTipoAdo.TipoMotos();
                     this.cbxTipo.DataTextField = "tipo";
                     this.cbxTipo.DataValueField = "id";
                     this.cbxTipo.DataBind();
@@ -44,6 +45,10 @@ namespace CasoProgramado
                     if (this.cbxTipo.Items.Count > 0)
                     {
                         this.cbxTipo.SelectedIndex = 0;
+                        if(this.cbxTipo.SelectedIndex == 0)
+                        {
+                            this.txtPrecio.Text = "" + 675000.00;
+                        }
                     }
                 }
             }
@@ -52,6 +57,8 @@ namespace CasoProgramado
 
                 throw ex;
             }
+
+            this.stringConexion = ConfigurationManager.ConnectionStrings["stringConexion"].ConnectionString;
         }
 
         protected void btnRegistrar_Click(object sender, EventArgs e)
@@ -72,21 +79,40 @@ namespace CasoProgramado
                 Cls_Motos_ADO controladorMoto = new Cls_Motos_ADO(ConfigurationManager.ConnectionStrings["stringConexion"].ConnectionString);
                 controladorMoto.RegistrarMotos(varMotos);
 
+                Cls_Motos_ADO controladorMotos = new Cls_Motos_ADO(ConfigurationManager.ConnectionStrings["stringConexion"].ConnectionString);
+                Cls_Motos varMoto = null;
+                varMoto = controladorMotos.ConsultarMotos(this.txtPlaca.Text.Trim());
+                this.txtPrecio.Text = varMoto.precio.ToString();
+                this.cbxTipo.SelectedValue = varMoto.tipo.ToString();
+                this.txtModelo.Text = varMoto.Modelo.ToString();
+                this.txtDescripcion.Text = varMoto.Descripcion.ToString();
+
+                string path2 = Request.PhysicalApplicationPath + "Imagenes\\" + varMoto.nombreFoto;
+                using (FileStream foto = new FileStream(path2, FileMode.Create, FileAccess.Write))
+                {
+                    foto.Flush();
+                    foto.Close();
+                }
+                File.WriteAllBytes(path2, varMoto.foto);
+                this.Scooter1.ImageUrl = "~/Imagenes/" + varMoto.nombreFoto;
+
+
+
                 this.txtPlaca.Text = "";
                 this.txtPrecio.Text = "";
                 this.cbxTipo.SelectedIndex = 0;
                 this.txtModelo.Text = "";
                 this.txtDescripcion.Text = "";
-                this.Scooter1.ImageUrl = "~/Imagenes/Scooter1.jpg";
+                this.Scooter1.ImageUrl = "~/Imagenes/índice.png";
 
                 Response.Write("<script language='JavaScript'>" + "alert('Moto Registrada Correctamente');</script>");
 
                 //se borra la foto despues de registrar
-                File.Delete(path);
+
             }
             catch (Exception ex)
             {
-                throw ex;
+                Response.Write("<script language='JavaScript'> alert('" + ex.Message + "');</script>");
             }
         }
 
@@ -111,7 +137,7 @@ namespace CasoProgramado
                 File.WriteAllBytes(path, varMoto.foto);
                 this.Scooter1.ImageUrl = "~/Imagenes/" + varMoto.nombreFoto;
 
-                
+
             }
             catch (Exception ex)
             {
@@ -124,7 +150,7 @@ namespace CasoProgramado
             try
             {
                 Cls_Motos_ADO controladorMotos = new Cls_Motos_ADO(ConfigurationManager.ConnectionStrings["stringConexion"].ConnectionString);
-                
+
                 //path de la foto
                 string urlImagen = this.Scooter1.ImageUrl;
                 urlImagen = urlImagen.Replace("~", "");
@@ -170,6 +196,14 @@ namespace CasoProgramado
 
                 //Se utiliza el metodo borrarCLiente se pasa al parametro del control ASP.NET
                 this.varMotoADO.EliminarMotos(this.txtPlaca.Text);
+
+                this.txtPlaca.Text = "";
+                this.txtPrecio.Text = "";
+                this.cbxTipo.SelectedIndex = 0;
+                this.txtModelo.Text = "";
+                this.txtDescripcion.Text = "";
+                this.Scooter1.ImageUrl = "~/Imagenes/índice.png";
+
                 Response.Write("<script language='JavaScript'> alert('Moto borrada con exito!');</script>");
             }
             catch (Exception ex)
@@ -209,6 +243,28 @@ namespace CasoProgramado
 
                 throw ex;
             }
+        }
+
+        protected void cbxTipo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (this.cbxTipo.SelectedIndex == 0)
+            {
+                this.txtPrecio.Text = ""+675000.00;
+            }
+
+            if(this.cbxTipo.SelectedIndex == 1)
+            {
+                this.txtPrecio.Text = ""+1500000.00;
+            }
+            if(this.cbxTipo.SelectedIndex == 2)
+            {
+                this.txtPrecio.Text = ""+1750000.00;
+            }
+            if(this.cbxTipo.SelectedIndex == 3)
+            {
+                this.txtPrecio.Text = ""+2000000.00;
+            }
+
         }
     }
 }
